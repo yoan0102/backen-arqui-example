@@ -12,11 +12,6 @@ class CommentController {
     return res.send(comment)
   }
 
-  async getAll(req, res) {
-    const comments = await _commentService.getAll()
-    return res.send(comments)
-  }
-
   async update(req, res) {
     const { body } = req
     const { commentId } = req.params

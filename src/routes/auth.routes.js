@@ -7,17 +7,5 @@ module.exports = function ({ AuthController }) {
   router.post('/singup', AuthController.singUp)
   router.post('/singin', AuthController.singIn)
 
-
-
-
-
-
-
-
-
-
-
-
-
   return router
 }
