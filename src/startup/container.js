@@ -38,10 +38,10 @@ container
   })
   .register({
     HomeController: asClass(HomeController.bind(HomeController)).singleton(),
-    UserController: asClass(UserController).singleton(),
-    IdeaController: asClass(IdeaController).singleton(),
-    CommentController: asClass(CommentController).singleton(),
-    AuthController: asClass(AuthController).singleton(),
+    UserController: asClass(UserController).bind(UserController).singleton(),
+    IdeaController: asClass(IdeaController).bind(IdeaController).singleton(),
+    CommentController: asClass(CommentController).bind(CommentController).singleton(),
+    AuthController: asClass(AuthController).bind(AuthController).singleton(),
   })
   .register({
     HomeRoutes: asFunction(HomeRoutes).singleton(),
