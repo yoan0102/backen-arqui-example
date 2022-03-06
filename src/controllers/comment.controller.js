@@ -34,7 +34,8 @@ class CommentController {
   async create(req, res) {
     const { body } = req
     const { ideId } = await req.params
-    const createComment = await _commentService.createComment(body, ideId)
+    const { id: userId } = await req.user
+    const createComment = await _commentService.createComment(body, ideId, userId)
     return res.status(201).send(createComment)
   }
 
